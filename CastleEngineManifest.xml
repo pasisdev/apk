@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="TestApp" caption="Cloud Test">
+  <build>
+    <units search_paths="code" />
+  </build>
+  <android_project package="com.test.cloudbuild" label="Cloud Test" />
+</project>

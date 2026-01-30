@@ -1,4 +1,4 @@
-unit GameInitialize;
+unit gameinitialize;
 
 interface
 

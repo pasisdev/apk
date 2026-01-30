@@ -1,0 +1,19 @@
+name: Build APK
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: castleengine/castle-engine:latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Build Android APK
+        run: castle-engine package --target=android --package-format=apk --verbose
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: test-app-apk
+          path: "*.apk"

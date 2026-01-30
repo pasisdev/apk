@@ -1,7 +1,7 @@
 <project name="TestApp" caption="Cloud Test">
-  <build game_units="gameinitialize">
-    <units search_paths="code" />
-  </build>
-  <data exists="false" />
-  <android_project package="com.test.cloudbuild" label="Cloud Test" />
+<build game_units="gameinitialize">
+<units search_paths="code" />
+</build>
+<data exists="false" />
+<android_project package="com.test.cloudbuild" label="cloudtest" />
 </project>

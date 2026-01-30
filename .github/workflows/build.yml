@@ -5,13 +5,18 @@ on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    # FIX 1: Use the correct, official Docker image
     container: kambi/castle-engine-cloud-builds-tools:cge-unstable
-
+    
     steps:
       - uses: actions/checkout@v3
-
+      
+      # FIX 2: Removed the invalid "--package-format" flag. 
+      # The engine generates an APK by default when target is android.
       - name: Build Android APK
-        run: run: castle-engine package --target=android --verbose
+        run: castle-engine package --target=android --verbose
+      
+      # Upload the result so you can download it
       - uses: actions/upload-artifact@v4
         with:
           name: test-app-apk

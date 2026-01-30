@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project name="TestApp" caption="Cloud Test">
-  <build>
+  
+  <build game_units="GameInitialize">
     <units search_paths="code" />
   </build>
+
+  <data exists="false" />
+
   <android_project package="com.test.cloudbuild" label="Cloud Test" />
 </project>
